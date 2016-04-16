@@ -163,6 +163,14 @@ $ git remote add origin git@github.com:JayJohnson1/example.git
 $ git push -u origin master
 ```
 
+### Sync a Fork with an existing repo
+* type:
+```
+$ git fetch upstream
+$ git merge upstream/master
+$ git push
+```
+
 
 
 
