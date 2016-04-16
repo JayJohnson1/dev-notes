@@ -9,7 +9,7 @@
 ```
 $ mkdir wp-wordstrap
 ```
-* inside of your wp-worstrap folder create a Sublime Project for convenience
+* inside of your wp-wordstrap folder create a Sublime Project for convenience
 * in your wp-wordstrap theme directory, create the following files: 
 ```
 $ touch style.css header.php index.php footer.php functions.php
