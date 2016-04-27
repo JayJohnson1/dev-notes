@@ -48,7 +48,7 @@ Code and take over the world line-by-line
 * go to this page http://getbootstrap.com/examples/jumbotron/ and view source
 * copy the html into your index.php file
 * the css links won’t work yet
-* in index.php, select the doctype to the closing </nav> tag
+* in index.php, select the doctype to the closing nav tag
 * copy and cut the code
 * paste it into header.php
 * replace the cut code in index.php with
