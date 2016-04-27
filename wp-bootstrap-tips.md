@@ -89,6 +89,7 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 * delete the old jumbotron.css link in header.php
 * copy the fonts folder from the bootstrap-3.3.6-dist folder into wp-wordstrap folder (it should be a sibling of the css and js folders)
 * delete the debugging comment in your header.php file
+* copy bootstrap.min.js to the js folder
 * your final functions.php file should look like this
 ```
 <?php
