@@ -65,6 +65,7 @@ Code and take over the world line-by-line
 ```
 * refresh your page in the browser to see if the footer include is working
 * place a copy bootstrap.min.css inside of your css folder
+* place a copy of the ie10-viewport-bug-workaround.css into your css folder
 * add the following code to your functions.php
 ```
 <?php
@@ -90,6 +91,7 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 * copy the fonts folder from the bootstrap-3.3.6-dist folder into wp-wordstrap folder (it should be a sibling of the css and js folders)
 * delete the debugging comment in your header.php file
 * copy bootstrap.min.js to the js folder
+* copy ie10-viewport-bug-workaround.js to the js folder
 * your final functions.php file should look like this
 ```
 <?php
