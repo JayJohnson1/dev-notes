@@ -26,16 +26,21 @@ $ mkdir js
 * add the following to your style.css file
 ```
 /*
-Theme Name: Kingluddite Magazine Theme
-Author: Kingluddite
-Author URI: http://kingluddite.com/
-Description: A simple theme to showcase how to build a theme from Twitter Bootstrap
+Theme Name: WordStrap Theme
+Author: Jay Johnson
+Author URI: http://jayevanjohnson.com/
+Description: A simple WordPress theme based on Bootstrap
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Code and take over the world line-by-line
 */
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
 ```
 * create a database using phpMyAdmin from a Webstart page in Mamp
 * go to localhost/wordstrap/wp-admin/
@@ -83,13 +88,17 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 ```
 <?php wp_footer(); ?>
 ```
-* delete the old bootstrap.min.css link in header.php
+* delete or comment out the bootstrap.min.css link in header.php
+* delete or comment out the ie10-viewport-bug-workaround.css link in header.php
+* delete or comment out the jumbotron.css link in header.php
+* delete or comment out the ie-emulation-modes-warning.js in header.php file
 * in the source page of http://getbootstrap.com/examples/jumbotron/ click on the link to jumbotron.css
 * add that css to your style.css file under the comments
 * change the class name and values to: .jumbotron { padding-top: 66px; padding-bottom: 48px; }
 * delete the old jumbotron.css link in header.php
 * copy the fonts folder from the bootstrap-3.3.6-dist folder into wp-wordstrap folder (it should be a sibling of the css and js folders)
-* delete the debugging comment in your header.php file
+* delete or comment out the bootstrap.min.js script in footer.php
+* delete or comment out the ie10-viewport-bug-workaround.js script in footer.php
 * copy bootstrap.min.js to the js folder
 * copy ie10-viewport-bug-workaround.js to the js folder
 * your final functions.php file should look like this
