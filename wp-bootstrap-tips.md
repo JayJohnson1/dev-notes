@@ -74,9 +74,13 @@ function theme_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 ?>
 ```
-* add the following code right before the closing <head> tag in header.php
+* add the following code right before the closing head tag in header.php
 ```
 <?php wp_head(); ?>
+```
+* add the following code right before the closing body tag in footer.php
+```
+<?php wp_footer(); ?>
 ```
 * delete the old bootstrap.min.css link in header.php
 * in the source page of http://getbootstrap.com/examples/jumbotron/ click on the link to jumbotron.css
