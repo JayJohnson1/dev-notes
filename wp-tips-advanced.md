@@ -1,52 +1,114 @@
-# Interactive Communication Dev & Delivery (notes)
+# VVV and Wordmove Install Notes
 
-### If you forget your admin/password
-* cd into ~/Sites/vagrant-local/www/my-cool-wp-site/
-* type $ sop .
-* open vvv-init.sh file
-* check line 16 for username and password information
+### Install VirtualBox
+* Download [VirtualBox 5.0.x](https://www.virtualbox.org/wiki/Downloads)
 
-### VVV & WP-CLI Setup & Workflow
-* Install VirtualBox (if you haven’t already)
-* Install Vagrant (if you haven’t already)
+### Install Vagrant
+* Download [Vagrant](https://www.vagrantup.com/downloads.html)
+* vagrant will now be available in your terminal, check the version
+```
+$ vagrant -v
+```
 * Install the vagrant-hostsupdater plugin
+```
+$ vagrant plugin install vagrant-hostsupdater
+```
 * Install the vagrant-triggers plugin
-* In your Sites folder type:
+```
+$ vagrant plugin install vagrant-triggers
+```
+* In your Sites/vvv folder type
 ```
 $ git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local
 ```
-* Install VV
+* cd into the vagrant-local/provision folder and create a file called provision-pre.sh:
 ```
-$ brew install bradp/vv/vv
+$ touch provision-pre.sh
 ```
-* cd into the vagrant-local folder and type:
+* Add the following code to this provision-pre.sh file
+```
+# Rubygems update
+
+if [ $(gem -v|grep '^2.') ]; then
+    echo "gem installed"
+else
+    apt-get install -y ruby-dev
+    echo "ruby-dev installed"
+    echo "gem not installed"
+    gem install rubygems-update
+    update_rubygems
+fi
+
+# wordmove install
+wordmove_install="$(gem list wordmove -i)"
+if [ "$wordmove_install" = true ]; then
+  echo "wordmove installed"
+else
+  echo "wordmove not installed"
+  gem install wordmove
+
+  wordmove_path="$(gem which wordmove | sed -s 's/.rb/\/deployer\/base.rb/')"
+  if [  "$(grep yaml $wordmove_path)" ]; then
+
+
+    echo "can require yaml"
+  else
+    echo "can't require yaml"
+    echo "set require yaml"
+
+    sed -i "7i require\ \'yaml\'" $wordmove_path
+
+    echo "can require yaml"
+
+  fi
+fi
+```
+* Bring up your vagrant box with
 ```
 $ vagrant up
+```
+* Run vagrant provision
+```
+$ vagrant reload --provision
+```
+* When nginx is done restarting type
+```
+$ vagrant ssh
+```
+* Check to make sure wordmove is installed by typing the following
+```
+$ wordmove
+```
+* You should see a list of options for using Wordmove
+
+### Variable VVV - The Best VVV Site Wizard
+* [Variable VVV](https://github.com/bradp/vv)
+```
+$ brew install bradp/vv/vv
 ```
 * create a new WP site by typing:
 ```
 $ vv create
 ```
-* install a VVV Dashboard
-* go to <http://vvv.dev> to confirm your site exists
-* confirm vagrant box is still running:
+
+### VVV-Dashboard
+* [VVV-Dashboard](https://github.com/leogopal/VVV-Dashboard)
+* Change into your vagrant-local/www/default directory
 ```
-$ vagrant status
+$ cd ~/Sites/vvv/vagrant-local/www/default
 ```
-* when the box comes up type:
+* Clone the repository
 ```
-$ vagrant ssh
+$ git clone git@github.com:leogopal/VVV-Dashboard.git VVV-Dash-Files-tmp
 ```
-* at the vagrant@vvv prompt type:
+* Move the dashboard files into the default folder with the following
 ```
-$ cd /srv/www/my-cool-wp-site/htdocs/
+$ sudo ditto VVV-Dash-Files-tmp/dashboard dashboard/
+$ sudo ditto VVV-Dash-Files-tmp/dashboard-custom.php dashboard-custom.php
 ```
-* confirm you're in the root WP directory by typing:
+* Carefully delete the tmp folder
 ```
-$ ls
+sudo rm -rf VVV-Dash-Files-tmp
 ```
-* now you can use wp-cli commands like 'wp theme list' or 'wp plugin list'
-* to exit vagrant ssh type:
-```
-$ exit
-```
+* Go to <http://vvv.dev> to see the dashboard in use
+
