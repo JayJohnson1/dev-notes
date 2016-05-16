@@ -8,7 +8,7 @@
 * ip for localhost is 127.0.0.1
 * no program can run on the same port
 
-### WordPress Installation Process (install with Vagrant / VV create also)
+### WordPress Installation Process
 * go to [wordpress.org](http://www.wordpress.org)
 * download WordPress 4.4.2 zip to your desktop
 * unzip the wp folder
