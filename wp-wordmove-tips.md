@@ -113,7 +113,7 @@ $ wp core download
 ### Push your local WordPress site to a staging server
 * while still ssh'd into your Vagrant box, change into your local wp htdocs folder
 ```
-cd /srv/www/first-wp-site/htdocs
+$ cd /srv/www/first-wp-site/htdocs
 ```
 * push your database, themes and plugins using Wordmove
 ```
