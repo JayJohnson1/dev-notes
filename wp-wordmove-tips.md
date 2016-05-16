@@ -1,13 +1,13 @@
 # Using Wordmove
 
 ### Create a database and subdomain on your host
-* go to the cpanel in Hostmonster and navigate to the Subdomains icon
+* in your browser, go to the cpanel in Hostmonster.com and navigate to the Subdomains icon
 * create a subdomain (first.jayevanjohnson.com) and note the absolute path (/home6/jayevanj/public_html/first)
 * go to the cpanel in Hostmonster and navigate to the MySQL Databases
 * create a database called "jayevanj_first", user: "jayevanj_admin", password: "p@ssword" and enable privileges
 
 ### Create a Movefile
-* change directories into your WordPress root folder
+* in Term, change directories into your WordPress root folder
 ```
 $ cd vvv/vagrant-local/www/first-wp-site
 ```
@@ -94,7 +94,7 @@ staging:
 ```
 
 ### Install WordPress on your host
-* in iTerm ssh into your host
+* in iTerm, open a new tab and ssh into your host
 ```
 $ ssh jayevanj@jayevanjohnson.com
 ```
@@ -111,6 +111,7 @@ $ wp core download
 * log into WordPress admin
 
 ### Push your local WordPress site to a staging server
+* in Term, go back to your first tab
 * while still ssh'd into your Vagrant box, change into your local wp htdocs folder
 ```
 $ cd /srv/www/first-wp-site/htdocs
