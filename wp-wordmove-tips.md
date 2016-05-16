@@ -1,9 +1,9 @@
 # Using Wordmove
 
 ### Create a database and subdomain on your host
-* in your browser, go to the cpanel in Hostmonster.com and navigate to the Subdomains icon
+* in your browser, go to the cpanel in your host and navigate to the Subdomains tab
 * create a subdomain (first.jayevanjohnson.com) and note the absolute path (/home6/jayevanj/public_html/first)
-* go to the cpanel in Hostmonster and navigate to the MySQL Databases
+* go to the cpanel in your host and navigate to the MySQL Databases tab
 * create a database called "jayevanj_first", user: "jayevanj_admin", password: "p@ssword" and enable privileges
 
 ### Create a Movefile
