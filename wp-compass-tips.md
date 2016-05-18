@@ -9,7 +9,7 @@ $ gem install compass
 ```
 
 ### Adding necessary files and folders
-* in your custom theme folder, duplicate the previous style.css in the css folder and rename it style.scss
+* in your custom theme folder, duplicate the previous style.css file in the css folder and rename it style.scss
 * create an scss folder in your custom theme folder
 ```
 $ mkdir scss
