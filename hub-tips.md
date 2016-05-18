@@ -1,5 +1,6 @@
 # Hub for Git
 
+### Install Hub
 * install Hub with
 ```
 $ brew install hub
@@ -8,18 +9,20 @@ $ brew install hub
 ```
 $ alias git=hub
 ```
-* copy a url from a repo on github (git@github.com:JayJohnson1/my-repo.git)
+
+### Clone a WordPress theme & Install a local Git repository
+* copy a url from a repository on Github.com (git@github.com:JayJohnson1/wurtlepress.git)
 * change directories into your Sites folder
 ```
 $ cd Sites
 ```
-* clone your remote repo
+* clone the custom WordPress theme into a folder called tmnt
 ```
-$ git clone git@github.com:JayJohnson1/my-repo.git
+$ git clone git@github.com:JayJohnson1/wurtlepress.git tmnt
 ```
-* change directories into your local repo folder
+* change directories into your local repo folder (tmnt)
 ```
-$ cd my-repo
+$ cd tmnt
 ```
 * trash your .git file
 ```
@@ -27,15 +30,15 @@ $ trash .git
 ```
 * change directories into wp-content/themes/my-theme
 ```
-$ cd wp-content/themes/my-theme
+$ cd tmnt/wp-content/themes/wp-ninja-turtles
 ```
 * install node modules
 ```
 $ npm install
 ```
-* change directories into your local repo folder
+* change directories into your local repo folder (tmnt) 
 ```
-$ cd my-repo
+$ cd tmnt
 ```
 * initialize a local repo, add the files, and do an initial commit
 ```
@@ -43,6 +46,8 @@ $ git init
 $ git add .
 $ git commit -m 'Initialize repo'
 ```
+
+### Use Hub to create a remote repository on Github
 * use Hub to create a remote repo
 ```
 $ git create -d "my-new-repo"
@@ -52,4 +57,4 @@ $ git create -d "my-new-repo"
 ```
 $ git push origin master
 ```
-* go to your github repositories to see your new repo
+* go to your Github.com repositories to see your new repository
