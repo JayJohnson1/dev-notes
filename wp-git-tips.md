@@ -1,7 +1,7 @@
 # WordPress & GitHub
 
 ### Only push your wp theme to GitHub
-* change directories into your wp root folder and type 
+* change directories into your wp root folder (which contains wp-admin, wp-content, etc.) and type 
 ```
 $ git init
 ```
