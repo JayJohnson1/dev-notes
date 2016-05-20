@@ -243,3 +243,66 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
     * in the Dashboard, go to Appearance > Themes
     * click the activate button for the bhs-theme
     * refresh localhost/bhs/wp-admin/themes.php page to see your custom theme
+
+### Add your theme to Git
+* Install Git locally in your WordPress root folder (which contains wp-admin, wp-content, etc.):
+```
+$ git init
+```
+* Create a .gitignore file in this same WordPress root folder:
+```
+$ touch .gitignore
+```
+* Add the following code to your .gitignore file:
+```
+# Thanks to: https://gist.github.com/jdbartlett/444295
+
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!README.md
+!wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories.
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you specify
+wp-content/plugins/*
+# !wp-content/plugins/my-single-file-plugin.php
+# !wp-content/plugins/my-directory-plugin/
+
+# Ignore everything in the "themes" directory, except the themes you specify
+wp-content/themes/*
+!wp-content/themes/bhs-theme/
+
+node_modules
+.sass-cache
+.DS_Store
+bower_components
+*maps*
+*.min*
+*vendors.js
+```
+* Check to see that most of your files are ignored:
+```
+$ git status
+```
+* Add your files to Git with:
+```
+$ git add -A
+```
+* Create an initial commit in Git:
+```
+$ git commit -m 'Initialize repo'
+```
+* Use [Hub](https://github.com/JayJohnson1/dev-notes/blob/master/hub-tips.md) to create a remote repository on Github.com:
+```
+$ git create -d "my-new-remote-repo"
+```
+* Push your local repository up to the remote repository on Github.com:
+```
+$ git push origin master
+```
+
