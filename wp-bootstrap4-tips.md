@@ -13,7 +13,7 @@
     * username: admin
     * password: password
 
-* Using [WP-CLI](http://wp-cli.org/)
+* Or by using [WP-CLI](http://wp-cli.org/)
     * in iTerm, change directories into ~/Sites and create a new folder for your WordPress installation:
     ```
     $ take bhs
@@ -37,8 +37,8 @@
     * username: admin
     * password: password
 
-* Manual [WordPress](https://wordpress.org/download/) installation
-    * download wordpress.zip
+* Or with a manual [WordPress](https://wordpress.org/download/) installation
+    * download the wordpress.zip file
     * expand the .zip file
     * copy the unzipped wordpress folder into your Sites folder
     * rename it “bhs"
@@ -127,7 +127,7 @@ $ npm install jquery --save
 ```
 * install Tether with npm:
 ```
-$ npm instal tether --save
+$ npm install tether --save
 ```
 * in iTerm, change directories into the css folder and create a jumbotron.css file:
 ```
