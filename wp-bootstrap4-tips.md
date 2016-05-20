@@ -243,4 +243,3 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
     * in the Dashboard, go to Appearance > Themes
     * click the activate button for the bhs-theme
     * refresh localhost/bhs/wp-admin/themes.php page to see your custom theme
-
