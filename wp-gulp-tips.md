@@ -311,7 +311,7 @@ $ mkdir custom
 ```
 * copy your source files into assets/src (img, js, or scss)
 * double check to make sure you use the proper file names and your folder structure in your theme matches the paths in your gulpfile.js (lines 11, 14, 15, 16, 17).
-* to run Gulp and load BrowserSync, type the following your wp-content/themes/my-theme folder (which contains your gulpfile.js_:
+* to run Gulp and load BrowserSync, type the following your wp-content/themes/my-theme folder (which contains your gulpfile.js):
 ```
 $ gulp
 ```
