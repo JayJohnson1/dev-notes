@@ -301,8 +301,8 @@ $ git commit -m 'Initialize repo'
 ```
 $ git create -d "my-new-remote-repo"
 ```
-* Push your local repository up to the remote repository on Github.com:
+* Push your local repository up to the remote repo and set the remote as upstream:
 ```
-$ git push origin master
+$ git push --set-upstream origin master
 ```
 
