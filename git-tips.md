@@ -102,26 +102,9 @@ $ git push origin master
 ```
 
 ### Delete a Branch
-* Clone a copy of the branch to delete to your desktop if you don't have one already
+* List all of the branches
 ```
-$ git clone [url_of_remote_repository_to_be_deleted]
-```
-* Change directory to branch of repository to be deleted
-```
-$ cd Desktop/
-$ cd [url_of_remote_repository_to_be_deleted]
-```
-* Confirm the branch you're in
-```
-$ git branch
-```
-* Switch to the branch you want to delete
-```
-$ git checkout [branch_to_delete]
-```
-* Confirm the branch you're in
-```
-$ git branch
+$ git branch -a
 ```
 * Switch to master branch
 ```
@@ -129,7 +112,7 @@ $ git checkout master
 ```
 * Delete local copy of branch
 ```
-$ git branch -d [branch_to_delete]
+$ git branch -D [branch_to_delete]
 ```
 * Delete remote copy of branch in GitHub
 ```
