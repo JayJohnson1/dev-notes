@@ -253,7 +253,7 @@ $ git init
 ```
 $ touch .gitignore
 ```
-* Add the following code to your .gitignore file:
+* Add the following code to your .gitignore file and change the !wp-content/themes/bhs-theme/ line to !wp-content/themes/your-theme/ 
 ```
 # Thanks to: https://gist.github.com/jdbartlett/444295
 
