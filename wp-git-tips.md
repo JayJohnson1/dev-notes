@@ -19,7 +19,7 @@ $ sop
 ```
 * copy the following code into your .gitignore file to ignore everything except your theme
 ```
-# Thanks to: https://gist.github.com/jdbartlett/444295
+# Place this .gitignore file in the WordPress root folder which contains the .git file and the wp-admin, wp-content and wp-includes folders
 
 # Ignore everything in the root except the "wp-content" directory.
 /*
