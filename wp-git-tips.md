@@ -75,17 +75,8 @@ git remote add origin git@github.com:JayJohnson1/my-wp-theme.git
 ```
 $ git remote -v
 ```
-* you should see 2 origin files now
-* type the following to pull down any changes
+* you should see 2 origin URLs (fetch and push)
+* type the following to push the repo to GitHub.com
 ```
-$ git pull origin master
+$ git push -u origin master
 ```
-* an editor may open up, type the following to close it
-```
-$ :q
-```
-* push your local repo changes up to GitHub
-```
-$ git push origin master
-```
-
